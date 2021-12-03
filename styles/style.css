@@ -1,0 +1,135 @@
+body {
+  margin: 0%;
+  padding: 0%;
+}
+
+body * {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Shrikhand", cursive;
+  font-family: "Roboto", sans-serif;
+}
+
+body a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+body ul {
+  list-style: none;
+}
+
+body .flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+img {
+  width: 100vw;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header figure {
+  width: 45%;
+  margin: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+header figure img {
+  width: 100%;
+}
+
+.location {
+  background-color: #eaeaea;
+  padding: 1rem;
+  -webkit-box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.151);
+          box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.151);
+}
+
+.location i {
+  margin-left: auto;
+  width: 0px;
+  position: relative;
+  right: 2em;
+}
+
+.location p {
+  margin-right: auto;
+  font-size: 1em;
+}
+
+.discover {
+  background-color: #f6f6f6;
+  padding: 1.5em;
+}
+
+.discover > * {
+  margin: auto;
+  text-align: center;
+}
+
+.discover h1 {
+  font-size: 1.5em;
+  font-weight: 600;
+  padding: 0.5em 1em 0.5em 1em;
+}
+
+.discover p {
+  font-size: 1.1em;
+  font-weight: 300;
+}
+
+.discover a {
+  cursor: pointer;
+  color: white;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  padding: 1em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 10em;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.103);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.103);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(180deg, #ff79da, #9356dc);
+}
+
+.restaurants .card {
+  width: 450px;
+  height: 350px;
+}
+
+.restaurants .card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */
