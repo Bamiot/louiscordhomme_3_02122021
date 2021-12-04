@@ -1,30 +1,24 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   margin: 0%;
   padding: 0%;
 }
 
-body .container {
-  max-width: 750px;
-  margin: auto;
-}
-
-body * {
-  margin: 0%;
-  padding: 0%;
-  font-family: "Shrikhand", cursive;
-  font-family: "Roboto", sans-serif;
-}
-
-body a {
+a {
   color: inherit;
   text-decoration: inherit;
 }
 
-body ul {
+ul {
   list-style: none;
 }
 
-body .flex-column {
+.flex-column {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,7 +28,7 @@ body .flex-column {
           flex-direction: column;
 }
 
-body .flex-row {
+.flex-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,6 +36,59 @@ body .flex-row {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.container {
+  max-width: 750px;
+  margin: auto;
+}
+
+label.like,
+label[for^="like"] {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  margin: 1em;
+  font-size: 1.5em;
+}
+
+label.like input,
+label[for^="like"] input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+label.like input[type="checkbox"]:checked + i,
+label[for^="like"] input[type="checkbox"]:checked + i {
+  font-weight: 900;
+  background: -webkit-linear-gradient(45deg, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a.gradient-btn {
+  cursor: pointer;
+  color: white;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  padding: 1em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 10em;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(180deg, #ff79da, #9356dc);
+}
+
+a.gradient-btn:hover {
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
 }
 
 header {
@@ -65,6 +112,49 @@ header figure {
 
 header figure img {
   width: 100%;
+}
+
+header a {
+  position: relative;
+  left: -2em;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+header a i {
+  font-size: 28px;
+  width: 0px;
+}
+
+header a i:hover {
+  color: #99e2d0;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  font-weight: 500;
+  padding: 1em;
+}
+
+footer ul {
+  margin-bottom: 1em;
+}
+
+footer li {
+  margin: 0.5em;
+}
+
+footer i {
+  height: 1em;
+  width: 1em;
+  margin-right: 0.2em;
+}
+
+footer h3 {
+  font-family: "Shrikhand", cursive !important;
+  font-weight: 300;
+  padding-bottom: 0.5em;
 }
 
 .location {
@@ -107,22 +197,6 @@ header figure img {
   font-weight: 300;
 }
 
-.discover a {
-  cursor: pointer;
-  color: white;
-  margin-bottom: 2em;
-  margin-top: 2em;
-  padding: 1em;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  border-radius: 10em;
-  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.103);
-          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.103);
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background: linear-gradient(180deg, #ff79da, #9356dc);
-}
-
 .fontionnement h2 {
   margin: 1.5em 1em 1em 0.5em;
   font-size: 25px;
@@ -139,6 +213,8 @@ header figure img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
 .fontionnement .step span {
@@ -180,6 +256,7 @@ header figure img {
 }
 
 .restaurants .card {
+  cursor: pointer;
   position: relative;
   height: 240px;
   margin-bottom: 1em;
@@ -201,24 +278,11 @@ header figure img {
   padding: 1em;
 }
 
-.restaurants .card label {
-  position: absolute;
-  bottom: 0%;
-  right: 0%;
-  margin: 1em;
-  font-size: 1.5em;
-}
-
-.restaurants .card label input {
-  position: absolute;
-  opacity: 0;
-}
-
-.restaurants .card label input[type="checkbox"]:checked + i {
-  font-weight: 900;
-  background: -webkit-linear-gradient(45deg, #ff79da, #9356dc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.restaurants .card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .restaurants .new::after {
@@ -232,30 +296,181 @@ header figure img {
   padding: 0.5em 1em 0.5em 1em;
 }
 
-footer {
-  background-color: #353535;
-  color: white;
-  font-weight: 500;
-  padding: 1em;
+.menu-header {
+  position: relative;
 }
 
-footer ul {
-  margin-bottom: 1em;
+.menu-header img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-footer li {
+.menu-header h1 {
+  font-family: "Shrikhand", cursive;
   margin: 0.5em;
 }
 
-footer i {
-  height: 1em;
-  width: 1em;
-  margin-right: 0.2em;
+.menu-header figcaption {
+  width: calc(100% - 2em);
+  padding: 1em;
+  position: absolute;
+  bottom: 0%;
+  background-color: #f6f6f6;
+  border-radius: 2.5em 2.5em 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-footer h3 {
-  font-family: "Shrikhand", cursive !important;
-  font-weight: 300;
-  padding-bottom: 0.5em;
+.menu-header label.like {
+  position: relative;
+}
+
+section {
+  padding: 1em;
+  background-color: #f6f6f6;
+}
+
+article.plat {
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 1.5rem;
+  height: 5.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+article.plat div {
+  padding: 1em 0;
+  margin-left: 1em;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+article.plat div * {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+article.plat div h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0.2em 0;
+}
+
+article.plat div p {
+  font-size: 18px;
+}
+
+article.plat b.prix {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 1em;
+  margin-top: auto;
+}
+
+article.plat i {
+  position: relative;
+  width: 5.5rem;
+  height: 5.5rem;
+  font-size: 28px;
+  border-radius: 0 1.5rem 1.5rem 0;
+  color: white;
+  background-color: #99e2d0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: check-slide-out 0.2s ease-in-out 0s 1 both;
+          animation: check-slide-out 0.2s ease-in-out 0s 1 both;
+}
+
+article.plat i::before {
+  position: relative;
+  right: -1.8rem;
+  margin-right: 4rem;
+}
+
+article.plat:hover i {
+  -webkit-animation: check-slide 0.5s ease-in-out 0s 1 both;
+          animation: check-slide 0.5s ease-in-out 0s 1 both;
+}
+
+article.plat:hover i::before {
+  -webkit-animation: check-spinner 0.3s ease-in-out 0.2s 1 both;
+          animation: check-spinner 0.3s ease-in-out 0.2s 1 both;
+}
+
+@-webkit-keyframes check-slide {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 5.5rem;
+  }
+}
+
+@keyframes check-slide {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 5.5rem;
+  }
+}
+
+@-webkit-keyframes check-slide-out {
+  from {
+    width: 5.5rem;
+  }
+  to {
+    width: 0px;
+  }
+}
+
+@keyframes check-slide-out {
+  from {
+    width: 5.5rem;
+  }
+  to {
+    width: 0px;
+  }
+}
+
+@-webkit-keyframes check-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes check-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 /*# sourceMappingURL=style.css.map */
