@@ -532,15 +532,20 @@ article.plat:hover i::before {
 }
 
 .check-out {
-  margin: 1em auto;
-  margin-bottom: 3em;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1em;
+  padding-bottom: 3em;
+  width: calc(100% - 1em);
 }
 
 .check-out .gradient-btn {
   font-size: 1.3em;
+  margin: 0%;
   padding: 1em 2.5em !important;
 }
 
