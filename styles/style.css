@@ -62,10 +62,45 @@ label[for^="like"] input {
 
 label.like input[type="checkbox"]:checked + i,
 label[for^="like"] input[type="checkbox"]:checked + i {
+  font-weight: 400;
+  background: -webkit-linear-gradient(45deg, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+label.like input[type="checkbox"]:checked + i::after,
+label[for^="like"] input[type="checkbox"]:checked + i::after {
+  position: absolute;
+  left: 0%;
+  content: "\f004";
   font-weight: 900;
   background: -webkit-linear-gradient(45deg, #ff79da, #9356dc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-animation: heart-fill 0.3s ease-in-out 0s 1 both;
+          animation: heart-fill 0.3s ease-in-out 0s 1 both;
+}
+
+@-webkit-keyframes heart-fill {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes heart-fill {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 a.gradient-btn {
@@ -425,7 +460,7 @@ article.plat i {
 article.plat i::before {
   position: relative;
   right: -1.8rem;
-  margin-right: 4rem;
+  margin-right: 3.5rem;
 }
 
 article.plat:hover i {
@@ -507,5 +542,76 @@ article.plat:hover i::before {
 .check-out .gradient-btn {
   font-size: 1.3em;
   padding: 1em 2.5em !important;
+}
+
+article.plat:nth-of-type(1) {
+  -webkit-animation: services 0.5s ease-in-out 0.1s 1 both;
+          animation: services 0.5s ease-in-out 0.1s 1 both;
+}
+
+article.plat:nth-of-type(2) {
+  -webkit-animation: services 0.5s ease-in-out 0.2s 1 both;
+          animation: services 0.5s ease-in-out 0.2s 1 both;
+}
+
+article.plat:nth-of-type(3) {
+  -webkit-animation: services 0.5s ease-in-out 0.3s 1 both;
+          animation: services 0.5s ease-in-out 0.3s 1 both;
+}
+
+article.plat:nth-of-type(4) {
+  -webkit-animation: services 0.5s ease-in-out 0.4s 1 both;
+          animation: services 0.5s ease-in-out 0.4s 1 both;
+}
+
+article.plat:nth-of-type(5) {
+  -webkit-animation: services 0.5s ease-in-out 0.5s 1 both;
+          animation: services 0.5s ease-in-out 0.5s 1 both;
+}
+
+article.plat:nth-of-type(6) {
+  -webkit-animation: services 0.5s ease-in-out 0.6s 1 both;
+          animation: services 0.5s ease-in-out 0.6s 1 both;
+}
+
+article.plat:nth-of-type(7) {
+  -webkit-animation: services 0.5s ease-in-out 0.7s 1 both;
+          animation: services 0.5s ease-in-out 0.7s 1 both;
+}
+
+article.plat:nth-of-type(8) {
+  -webkit-animation: services 0.5s ease-in-out 0.8s 1 both;
+          animation: services 0.5s ease-in-out 0.8s 1 both;
+}
+
+article.plat:nth-of-type(9) {
+  -webkit-animation: services 0.5s ease-in-out 0.9s 1 both;
+          animation: services 0.5s ease-in-out 0.9s 1 both;
+}
+
+@-webkit-keyframes services {
+  from {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes services {
+  from {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */

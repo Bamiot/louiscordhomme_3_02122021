@@ -95,9 +95,10 @@ article.plat {
     &::before {
       position: relative;
       right: -1.8rem;
-      margin-right: 4rem;
+      margin-right: 3.5rem;
     }
   }
+
   &:hover i {
     animation: check-slide 0.5s ease-in-out 0s 1 both;
     &::before {
@@ -137,5 +138,21 @@ article.plat {
   .gradient-btn {
     font-size: 1.3em;
     padding: 1em 2.5em !important;
+  }
+}
+
+@for $i from 1 to 10 {
+  article.plat:nth-of-type(#{$i}) {
+    animation: services 0.5s ease-in-out $i * 0.1s 1 both;
+  }
+}
+@keyframes services {
+  from {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
