@@ -42,25 +42,25 @@
         <section>
           <aside class="fontionnement">
             <h2>Fonctionnement</h2>
-            <div class="flex-row">
+            <div class="flex-row step">
               <span>1</span>
               <i class="fas fa-mobile-alt"></i>
               <p>Choisissez un restaurant</p>
             </div>
-            <div class="flex-row">
+            <div class="flex-row step">
               <span>2</span>
               <i class="fas fa-list-ul"></i>
               <p>Composez votre menu</p>
             </div>
-            <div class="flex-row">
+            <div class="flex-row step">
               <span>3</span>
               <i class="fas fa-store"></i>
               <p>Dégustez au restaurant</p>
             </div>
           </aside>
           <article id="restaurants" class="restaurants">
-            <h2>restaurants</h2>
-            <figure class="card">
+            <h2>Restaurants</h2>
+            <figure class="card new">
               <img
                 src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                 alt="plat"
@@ -68,10 +68,13 @@
               <figcaption>
                 <h3>La palette du goût</h3>
                 <p>Ménilmontant</p>
-                <i class="heart"></i>
+                <label for="like-palette">
+                  <input type="checkbox" id="like-palette" />
+                  <i class="far fa-heart"></i>
+                </label>
               </figcaption>
             </figure>
-            <figure class="card">
+            <figure class="card new">
               <img
                 src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
                 alt="plat"
@@ -79,7 +82,10 @@
               <figcaption>
                 <h3>La note enchantée</h3>
                 <p>Charonne</p>
-                <i class="heart"></i>
+                <label for="like-note">
+                  <input type="checkbox" id="like-note" />
+                  <i class="far fa-heart"></i>
+                </label>
               </figcaption>
             </figure>
             <figure class="card">
@@ -90,7 +96,10 @@
               <figcaption>
                 <h3>A la française</h3>
                 <p>Cité Rouge</p>
-                <i class="heart"></i>
+                <label for="like-france">
+                  <input type="checkbox" id="like-france" />
+                  <i class="far fa-heart"></i>
+                </label>
               </figcaption>
             </figure>
             <figure class="card">
@@ -101,17 +110,18 @@
               <figcaption>
                 <h3>Le délice des sens</h3>
                 <p>Folie-Méricourt</p>
-                <i class="heart"></i>
+                <label for="like-delice">
+                  <input type="checkbox" id="like-delice" />
+                  <i class="far fa-heart"></i>
+                </label>
               </figcaption>
             </figure>
           </article>
         </section>
       </main>
-      <footer>
+      <footer id="footer">
         <ul>
-          <li>
-            <figure><img src="images/logo/ohmyfood.png" alt="logo" /></figure>
-          </li>
+          <li><h3>ohmyfood</h3></li>
           <li>
             <a href="#">
               <i class="fas fa-utensils"></i>
