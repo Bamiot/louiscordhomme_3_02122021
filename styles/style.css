@@ -339,6 +339,28 @@ section {
   background-color: #f6f6f6;
 }
 
+section h2 {
+  position: relative;
+  font-size: 26px;
+  font-weight: 300;
+  margin: 0.2em;
+  margin-bottom: 1.5rem;
+}
+
+section h2::after {
+  content: " ";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  height: 4px;
+  width: 3.5rem;
+  background-color: #99e2d0;
+}
+
+section > * {
+  margin-bottom: 1rem;
+}
+
 article.plat {
   position: relative;
   overflow: hidden;
@@ -472,5 +494,18 @@ article.plat:hover i::before {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+
+.check-out {
+  margin: 1em auto;
+  margin-bottom: 3em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.check-out .gradient-btn {
+  font-size: 1.3em;
+  padding: 1em 2.5em !important;
 }
 /*# sourceMappingURL=style.css.map */
