@@ -41,6 +41,7 @@ ul {
 .container {
   min-width: 320px;
   margin: auto;
+  overflow: hidden;
 }
 
 label.like,
@@ -269,8 +270,8 @@ footer h3 {
 .location {
   background-color: #eaeaea;
   padding: 1rem;
-  -webkit-box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.151);
-          box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.151);
+  -webkit-box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.15);
 }
 
 .location i {
@@ -290,6 +291,14 @@ footer h3 {
   padding: 1.5em;
 }
 
+@media (min-width: 780px) {
+  .discover {
+    width: calc(780px - 3em);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .discover > * {
   margin: auto;
   text-align: center;
@@ -306,10 +315,24 @@ footer h3 {
   font-weight: 300;
 }
 
+@media (min-width: 780px) {
+  .fontionnement {
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .fontionnement h2 {
+    margin-left: 0% !important;
+  }
+}
+
 .fontionnement h2 {
   margin: 1.5em 1em 1em 0.5em;
   font-size: 25px;
   font-weight: 650;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .fontionnement .step {
@@ -361,16 +384,21 @@ footer h3 {
 
 @media (min-width: 780px) {
   .restaurants {
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     grid-gap: 1em 2em;
+    padding: 4em 0 4em 0 !important;
   }
 }
 
 .restaurants h2 {
   position: absolute;
+  top: 0%;
   font-size: 25px;
   font-weight: 650;
   margin-bottom: 1em;
@@ -424,14 +452,21 @@ footer h3 {
   padding: 0.5em 1em 0.5em 1em;
 }
 
+.menu {
+  background: radial-gradient(circle at bottom, #fff 60%, transparent 70%, transparent 95%, #000);
+}
+
 .menu-header {
   position: relative;
+  height: 60vh;
+  z-index: -1;
 }
 
 .menu-header img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: -1;
 }
 
 .menu-header h1 {
@@ -458,6 +493,13 @@ footer h3 {
           justify-content: space-between;
 }
 
+@media (min-width: 780px) {
+  .menu-header figcaption {
+    max-width: calc(780px - 2em);
+    margin-left: calc(50% - 390px);
+  }
+}
+
 .menu-header label.like {
   position: relative;
   height: -webkit-fit-content;
@@ -468,6 +510,14 @@ footer h3 {
 section {
   padding: 1em;
   background-color: #f6f6f6;
+}
+
+@media (min-width: 780px) {
+  section {
+    max-width: calc(780px - 2em);
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 section h2 {

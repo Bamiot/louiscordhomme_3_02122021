@@ -1,7 +1,7 @@
 .location {
   background-color: #eaeaea;
   padding: 1rem;
-  box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.151);
+  box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.15);
   i {
     margin-left: auto;
     width: 0px;
@@ -17,6 +17,11 @@
 .discover {
   background-color: #f6f6f6;
   padding: 1.5em;
+  @include desktop {
+    width: calc(#{$desktop-breakpoint} - 3em);
+    margin-left: auto;
+    margin-right: auto;
+  }
   & > * {
     margin: auto;
     text-align: center;
@@ -33,10 +38,19 @@
 }
 
 .fontionnement {
+  @include desktop {
+    max-width: $desktop-breakpoint;
+    margin-left: auto;
+    margin-right: auto;
+    h2 {
+      margin-left: 0% !important;
+    }
+  }
   h2 {
     margin: 1.5em 1em 1em 0.5em;
     font-size: 25px;
     font-weight: 650;
+    width: fit-content;
   }
   .step {
     cursor: pointer;
@@ -78,12 +92,17 @@
   padding: 4em 1em 4em 1em;
   background-color: #f6f6f6;
   @include desktop {
+    max-width: $desktop-breakpoint;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1em 2em;
+    padding: 4em 0 4em 0 !important;
   }
   h2 {
     position: absolute;
+    top: 0%;
     font-size: 25px;
     font-weight: 650;
     margin-bottom: 1em;

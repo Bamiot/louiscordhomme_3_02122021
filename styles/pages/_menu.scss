@@ -1,8 +1,21 @@
+.menu {
+  background: radial-gradient(
+    circle at bottom,
+    #fff 60%,
+    transparent 70%,
+    transparent 95%,
+    #000
+  );
+}
+
 .menu-header {
   position: relative;
+  height: 60vh;
+  z-index: -1;
   img {
     width: 100%;
     object-fit: cover;
+    z-index: -1;
   }
   h1 {
     @include font-logo;
@@ -18,6 +31,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    @include desktop {
+      max-width: calc(#{$desktop-breakpoint} - 2em);
+      margin-left: calc(50% - 390px);
+    }
   }
   label.like {
     position: relative;
@@ -26,6 +43,11 @@
 }
 
 section {
+  @include desktop {
+    max-width: calc(#{$desktop-breakpoint} - 2em);
+    margin-left: auto;
+    margin-right: auto;
+  }
   padding: 1em;
   background-color: #f6f6f6;
   h2 {
