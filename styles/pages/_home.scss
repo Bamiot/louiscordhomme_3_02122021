@@ -73,11 +73,17 @@
 }
 
 .restaurants {
+  position: relative;
   margin-top: 4em;
   padding: 4em 1em 4em 1em;
   background-color: #f6f6f6;
-  display: flex;
+  @include desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em 2em;
+  }
   h2 {
+    position: absolute;
     font-size: 25px;
     font-weight: 650;
     margin-bottom: 1em;
