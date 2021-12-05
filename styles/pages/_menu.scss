@@ -21,6 +21,7 @@
   }
   label.like {
     position: relative;
+    height: fit-content;
   }
 }
 
@@ -136,7 +137,7 @@ article.plat {
   justify-content: center;
   padding: 1em;
   padding-bottom: 3em;
-  width: calc(100% - 1em);
+  width: calc(100% - 2em);
   .gradient-btn {
     font-size: 1.3em;
     margin: 0%;

@@ -28,6 +28,7 @@ ul {
 }
 
 .container {
-  max-width: 750px;
+  //max-width: $desktop-breakpoint;
+  min-width: 320px;
   margin: auto;
 }

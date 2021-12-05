@@ -1,11 +1,12 @@
-@import "sass-utils/normalize";
 @import "sass-utils/variables";
+@import "sass-utils/normalize";
 @import "sass-utils/mixin";
 
 @import "components";
 
 @import "layout/header";
 @import "layout/footer";
+@import "layout/loadingSpinner";
 
 @import "pages/home";
 @import "pages/menu";

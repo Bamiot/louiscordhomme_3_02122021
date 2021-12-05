@@ -39,7 +39,7 @@ ul {
 }
 
 .container {
-  max-width: 750px;
+  min-width: 320px;
   margin: auto;
 }
 
@@ -143,6 +143,7 @@ header figure {
   width: 45%;
   margin: 1rem;
   margin-bottom: 0.5rem;
+  max-width: 380px;
 }
 
 header figure img {
@@ -176,6 +177,20 @@ footer ul {
   margin-bottom: 1em;
 }
 
+@media (min-width: 780px) {
+  footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 footer li {
   margin: 0.5em;
 }
@@ -190,6 +205,65 @@ footer h3 {
   font-family: "Shrikhand", cursive !important;
   font-weight: 300;
   padding-bottom: 0.5em;
+}
+
+.spinner {
+  position: fixed;
+  display: inline-block;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffffbb;
+  -webkit-animation: spinner-out 0s linear 3s 1 both;
+          animation: spinner-out 0s linear 3s 1 both;
+}
+
+.spinner::after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: auto;
+  margin-top: calc(50vh - 32px);
+  border-radius: 50%;
+  border: 6px solid #9356dc;
+  border-color: #9356dc transparent #ff79da transparent;
+  -webkit-animation: spinner 1.5s ease-in-out 0s infinite both;
+          animation: spinner 1.5s ease-in-out 0s infinite both;
+}
+
+@-webkit-keyframes spinner {
+  from {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  from {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spinner-out {
+  to {
+    visibility: hidden;
+  }
+}
+
+@keyframes spinner-out {
+  to {
+    visibility: hidden;
+  }
 }
 
 .location {
@@ -282,6 +356,9 @@ footer h3 {
   margin-top: 4em;
   padding: 4em 1em 4em 1em;
   background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .restaurants h2 {
@@ -318,6 +395,13 @@ footer h3 {
           transform: scale(1.05);
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+@media (min-width: 780px) {
+  .restaurants .card:hover {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
 }
 
 .restaurants .new::after {
@@ -367,6 +451,9 @@ footer h3 {
 
 .menu-header label.like {
   position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 section {
@@ -540,7 +627,7 @@ article.plat:hover i::before {
           justify-content: center;
   padding: 1em;
   padding-bottom: 3em;
-  width: calc(100% - 1em);
+  width: calc(100% - 2em);
 }
 
 .check-out .gradient-btn {
