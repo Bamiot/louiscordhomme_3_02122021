@@ -2,6 +2,10 @@
   background-color: #eaeaea;
   padding: 1rem;
   box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.15);
+  max-width: calc(#{$desktop-breakpoint} - 2rem);
+  margin-left: auto;
+  margin-right: auto;
+
   i {
     margin-left: auto;
     width: 0px;
