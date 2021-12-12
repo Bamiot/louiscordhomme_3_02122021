@@ -6,15 +6,31 @@
     transparent 95%,
     #000 105%
   );
+  @include large-desktop {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+    section {
+      width: calc(#{$max-width/3} - 2em);
+    }
+    .check-out {
+      grid-area: 2 / 1 / 3 / 4;
+      max-width: none;
+      width: calc(100% - 2em);
+    }
+  }
 }
 
 .menu-header {
   position: relative;
   height: 50vh;
+  // z-index: -1;
   img {
     width: 100%;
     object-fit: cover;
-    z-index: -1;
   }
   h1 {
     @include font-logo;
@@ -31,8 +47,11 @@
     flex-direction: row;
     justify-content: space-between;
     @include desktop {
-      max-width: calc(#{$desktop-breakpoint} - 2em);
-      margin-left: calc(50% - 390px);
+      max-width: calc(#{$max-width} - 2em);
+      margin-left: calc(50% - #{$max-width/2});
+    }
+    @include small-desktop {
+      margin-left: 0%;
     }
   }
   label.like {
@@ -43,7 +62,7 @@
 
 section {
   @include desktop {
-    max-width: calc(#{$desktop-breakpoint} - 2em);
+    max-width: calc(#{$max-width} - 2em);
     margin-left: auto;
     margin-right: auto;
   }

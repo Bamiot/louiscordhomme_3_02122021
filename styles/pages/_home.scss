@@ -2,7 +2,7 @@
   background-color: #eaeaea;
   padding: 1rem;
   box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.15);
-  max-width: calc(#{$desktop-breakpoint} - 2rem);
+  max-width: calc(#{$max-width} - 2rem);
   margin-left: auto;
   margin-right: auto;
 
@@ -22,7 +22,7 @@
   background-color: #f6f6f6;
   padding: 1.5em;
   @include desktop {
-    width: calc(#{$desktop-breakpoint} - 3em);
+    max-width: calc(#{$max-width} - 3em);
     margin-left: auto;
     margin-right: auto;
   }
@@ -43,10 +43,13 @@
 
 .fontionnement {
   @include desktop {
-    max-width: $desktop-breakpoint;
+    max-width: $max-width;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
     h2 {
+      position: absolute;
+      top: -3em;
       margin-left: 0% !important;
     }
   }
@@ -87,6 +90,9 @@
         color: #9356dc;
       }
     }
+    @include desktop {
+      width: 33%;
+    }
   }
 }
 
@@ -96,7 +102,7 @@
   padding: 4em 1em 4em 1em;
   background-color: #f6f6f6;
   @include desktop {
-    max-width: $desktop-breakpoint;
+    max-width: $max-width;
     margin-left: auto;
     margin-right: auto;
     display: grid;

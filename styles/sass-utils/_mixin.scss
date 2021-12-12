@@ -7,3 +7,15 @@
     @content;
   }
 }
+
+@mixin small-desktop {
+  @media (min-width:#{$desktop-breakpoint}) and (max-width:#{$max-width}) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media (min-width:#{$max-width}) {
+    @content;
+  }
+}
