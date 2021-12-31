@@ -1,6 +1,6 @@
 // purple heart
-label.like,
-label[for^="like"] {
+.like,
+*[for^="like"] {
   cursor: pointer;
   position: absolute;
   bottom: 0%;
@@ -9,6 +9,9 @@ label[for^="like"] {
   font-size: 1.5em;
   input {
     position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
     opacity: 0;
     cursor: pointer;
   }

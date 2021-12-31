@@ -44,8 +44,8 @@ ul {
   overflow: hidden;
 }
 
-label.like,
-label[for^="like"] {
+.like,
+*[for^="like"] {
   cursor: pointer;
   position: absolute;
   bottom: 0%;
@@ -54,23 +54,26 @@ label[for^="like"] {
   font-size: 1.5em;
 }
 
-label.like input,
-label[for^="like"] input {
+.like input,
+*[for^="like"] input {
   position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
   opacity: 0;
   cursor: pointer;
 }
 
-label.like input[type="checkbox"]:checked + i,
-label[for^="like"] input[type="checkbox"]:checked + i {
+.like input[type="checkbox"]:checked + i,
+*[for^="like"] input[type="checkbox"]:checked + i {
   font-weight: 400;
   background: -webkit-linear-gradient(45deg, #ff79da, #9356dc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-label.like input[type="checkbox"]:checked + i::after,
-label[for^="like"] input[type="checkbox"]:checked + i::after {
+.like input[type="checkbox"]:checked + i::after,
+*[for^="like"] input[type="checkbox"]:checked + i::after {
   position: absolute;
   left: 0%;
   content: "\f004";
@@ -118,6 +121,8 @@ a.gradient-btn {
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background: linear-gradient(180deg, #ff79da, #9356dc);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 a.gradient-btn:hover {
@@ -418,6 +423,10 @@ footer h3 {
   margin-bottom: 1em;
 }
 
+.restaurants .card-wrp {
+  position: relative;
+}
+
 .restaurants .card {
   cursor: pointer;
   position: relative;
@@ -464,6 +473,11 @@ footer h3 {
   border-radius: 0.2em;
   font-size: 0.9em;
   padding: 0.5em 1em 0.5em 1em;
+}
+
+.fontionnement h2::after,
+.restaurants h2::after {
+  display: none;
 }
 
 .menu {
@@ -589,6 +603,7 @@ section > * {
 }
 
 article.plat {
+  cursor: pointer;
   position: relative;
   overflow: hidden;
   background-color: white;

@@ -117,6 +117,9 @@
     font-weight: 650;
     margin-bottom: 1em;
   }
+  .card-wrp {
+    position: relative;
+  }
   .card {
     cursor: pointer;
     position: relative;
@@ -151,5 +154,12 @@
     border-radius: 0.2em;
     font-size: 0.9em;
     padding: 0.5em 1em 0.5em 1em;
+  }
+}
+
+.fontionnement,
+.restaurants {
+  h2::after {
+    display: none;
   }
 }
